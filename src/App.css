@@ -1,0 +1,28 @@
+.frame {
+  background-color: aqua;
+  height: 80vh;
+  overflow-y: auto;
+  margin: 2%;
+  padding: 2%;
+}
+
+.red {
+  background-color: red;
+}
+
+.gray {
+  background-color: gray;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.black {
+  background-color: black;
+  color: white;
+}
+
+.tableHeader {
+  text-align: center;
+}
