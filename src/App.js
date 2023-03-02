@@ -6,9 +6,9 @@ import Editable from "./CustomComponents/Tables/Editable/Editable";
 import SortFilter from "./CustomComponents/Tables/Sort-Filter/Sort-Filter";
 import AllTogether from "./CustomComponents/Tables/Sort-Filter-Edit/Sort-Filter-Edit";
 import Crud from "./CustomComponents/Tables/Extras/CrudTable";
-import CrudIe from "./CustomComponents/Tables/CRUDIE/CRUDIE"
+import CrudIe from "./CustomComponents/Tables/CRUDIE/CRUDIE";
 import ImportExport from "./CustomComponents/Tables/Extras/FileImportExport";
-import Expandable from "./CustomComponents/Tables/ExpanedTable/Expanded"
+import Expandable from "./CustomComponents/Tables/ExpanedTable/Expanded";
 
 // importing data
 import dummyData from "./data/data1";
@@ -17,16 +17,26 @@ import { useEffect, useState } from "react";
 import CRUDIE from "./CustomComponents/Tables/CRUDIE/CRUDIE";
 
 function App() {
-
-
   const [columns, setColumns] = useState();
-  const [data, setData] = useState(dummyData)
+  const [data, setData] = useState(dummyData);
   useEffect(() => {
-    let tempCols = Object.keys(dummyData[0]).map((colName) =>
-    ({
-      column: colName, sortable: true, editable: true, filterable: true,
-      formInputDetails: { defaultVal: "abcd", inputType: "text", radioLabel: "Please select your favorite Web language:", data: [{ label: "xyz", value: "abc" }, { label: "uvw", value: "def" }], min: 0, max: 5 }
-      // if inut type is dropdown then [{ label: "xyz", value: "abc" }] 
+    let tempCols = Object.keys(dummyData[0]).map((colName) => ({
+      column: colName,
+      sortable: true,
+      editable: true,
+      filterable: true,
+      formInputDetails: {
+        defaultVal: "abcd",
+        inputType: "text",
+        radioLabel: "Please select your favorite Web language:",
+        data: [
+          { label: "xyz", value: "abc" },
+          { label: "uvw", value: "def" },
+        ],
+        min: 0,
+        max: 5,
+      },
+      // if inut type is dropdown then [{ label: "xyz", value: "abc" }]
       // if it it text then {placeholder: "xyz" , name: "name"}
       // if checkbox {label: "label" }
       // if date {min: "" , max: "" }
@@ -34,16 +44,15 @@ function App() {
       // if textarea  {placeholder: "xyz" , name: "name" , lines: 2}
     }));
     setColumns(tempCols);
-    console.log(tempCols)
+    console.log(tempCols);
   }, []);
-
 
   const upDateData = (newaData) => {
     setData(newaData);
-  }
+  };
   return (
-    <div className="App">
-      {/* <div className="frame">
+    <div>
+      {/* <div>
         {dummyData && columns && (
           <Sortable
             data={dummyData}
@@ -54,19 +63,21 @@ function App() {
           />
         )}
       </div> */}
-      {/* 
-      <div className="frame blue">
+
+      <div>
         {dummyData && columns && (
-          <Filterable data={dummyData}
+          <Filterable
+            data={dummyData}
             columns={columns}
             filterableCols={columns}
             tableHeader="Filter Table"
             recordsPerPageOption={[5, 10, 20]}
             defaultRecordPerPage={5}
-          />)}
+          />
+        )}
       </div>
- */}
-      {/* <div className="frame gray">
+
+      <div>
         {dummyData && columns && (
           <Editable
             data={dummyData}
@@ -78,9 +89,9 @@ function App() {
             uniqueId="id"
           />
         )}
-      </div> */}
+      </div>
 
-      <div className="frame red">
+      <div>
         {dummyData && columns && (
           <CRUDIE
             data={data}
@@ -93,13 +104,10 @@ function App() {
             uniqueId="id"
             upDateData={upDateData}
           />
-
         )}
       </div>
 
-
-
-      <div className="frame black">
+      <div>
         {dummyData && columns && (
           <Expandable
             data={data}
@@ -112,8 +120,8 @@ function App() {
             uniqueId="id"
             upDateData={upDateData}
             innerTableColumns={["current_address", "permanent_address"]}
-
-          />)}
+          />
+        )}
       </div>
     </div>
   );
