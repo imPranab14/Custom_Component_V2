@@ -4,10 +4,6 @@ import EditabrlStyle from "../Editable/Editable.module.scss";
 import { FaEdit } from "react-icons/fa";
 import { FaPrescriptionBottleAlt } from "react-icons/fa";
 
-
-
-
-
 const Editable = ({
   data,
   columns,
@@ -184,7 +180,9 @@ const Editable = ({
   return (
     <div className={EditabrlStyle.MainBody}>
       <div className={EditabrlStyle.frame}>
-        {tableHeader && <h2 className={EditabrlStyle.MainHeader}>{tableHeader}</h2>}
+        {tableHeader && (
+          <h2 className={EditabrlStyle.MainHeader}>{tableHeader}</h2>
+        )}
 
         <>
           {selectedOneRowForEdit && (
@@ -225,7 +223,7 @@ const Editable = ({
               <th>
                 {col.sortable ? (
                   <button
-                  className={EditabrlStyle.TableHeaderText}
+                    className={EditabrlStyle.TableHeaderText}
                     onClick={() =>
                       sortColumn(
                         col.column,
@@ -261,10 +259,21 @@ const Editable = ({
                     <td>{row[col.column]}</td>
                   ))}{" "}
                   <td>
-                    <button className={EditabrlStyle.Editbtn} onClick={() => editRow(row)}> <FaEdit/></button>
+                    <button
+                      className={EditabrlStyle.Editbtn}
+                      onClick={() => editRow(row)}
+                    >
+                      {" "}
+                      <FaEdit />
+                    </button>
                   </td>
                   <td>
-                    <button className={EditabrlStyle.delbtn} onClick={() => deleteRow(row)}><FaPrescriptionBottleAlt/></button>
+                    <button
+                      className={EditabrlStyle.delbtn}
+                      onClick={() => deleteRow(row)}
+                    >
+                      <FaPrescriptionBottleAlt />
+                    </button>
                   </td>
                 </tr>
               );
