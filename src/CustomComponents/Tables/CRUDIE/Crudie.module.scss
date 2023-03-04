@@ -1,0 +1,88 @@
+
+
+$bg-color:#eff3f8;
+$table-border:1px solid #dee2e6;
+$tdFontColor:#495057;
+$tableBackground:white;
+$tableDataFont:0.9rem;
+$tableHeaderColor:#495057;
+$tableHeaderBGColor:#f8f9fa;
+$tableHoverColor:#e3e9ecbb;
+
+
+
+
+.MainBody{
+    margin: 2%;
+    //background-color: red;
+  }
+.frame {
+    // height: 200px;
+    overflow-y: auto;
+    
+    padding: 1.3%; 
+    background-color: $tableBackground;
+    border-radius: 1.2rem;
+
+  }
+.MainHeader{
+    margin-top: 0.5rem;
+    margin-bottom: 1.3rem;
+    font-size: 1.1rem;
+}
+.TableHeaderText{
+  font-weight: 700;
+  color: $tableHeaderColor;
+  padding-left: 0;
+  font-size: 0.82rem;
+}
+.Editbtn{
+  font-size: 16px;
+    color: #495057;
+    margin-left: -10px;
+}
+.delbtn{
+  font-size: 16px;
+  color: #495057;
+  margin-left: -10px;
+}
+
+.TablePagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.9rem;
+}
+.PageOption{
+  margin-left: 2.5rem;
+  border-radius: 7px;
+  border-color: #bebebe;
+}
+button {
+  border: none;
+  background: none;
+}
+.PAgebtn{
+  background-color: none;
+  font-size: 1rem;
+  color: $tableHeaderColor;
+  font-size: 1.2rem;
+  //border: 1px solid rgb(0 0 0 / 8%);
+  border-radius: 8px;
+  padding-top: 0.18rem;
+}
+.PageNo{
+  font-size: 0.9rem;
+  padding: 0.3rem 0.7rem 0.3rem 0.7rem;
+  border: 1px solid #0000000c;
+  border-radius: 50%;
+  background-color: $tableHoverColor;
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+  font-weight: 400;
+
+}
+
+.test{
+  background-color: red;
+}

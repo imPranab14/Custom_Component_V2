@@ -185,9 +185,13 @@ const Editable = ({
         )}
 
         <>
+        <div >
+        
           {selectedOneRowForEdit && (
-            <div>
-              Popup Form
+            <div  className={EditabrlStyle.modal}  >
+             <div className={EditabrlStyle.modalcontent}>
+             <h3 className={EditabrlStyle.PopupHeader}>Popup Form</h3>
+              <div className={EditabrlStyle.test}>
               {columns.map((col, index) =>
                 getInputBoxFromType(
                   col,
@@ -196,15 +200,25 @@ const Editable = ({
                   index
                 )
               )}
-              <button onClick={() => onUpdateConfirm()}>Update</button>
-              <button onClick={() => onUpdateCancel()}>Cancel</button>
+              </div>
+              <div className={EditabrlStyle.PopupFooter}>
+              <button className={EditabrlStyle.button33} onClick={() => onUpdateConfirm()}>Update</button>
+              <button className={EditabrlStyle.button34} onClick={() => onUpdateCancel()}>Cancel</button>
+              </div>
+              </div>
             </div>
+            
           )}
+        </div>
+        
         </>
+        
+
 
         <>
           {selectedOneRowForDelete && (
-            <div>
+             <div  className={EditabrlStyle.modal}  >
+             <div className={EditabrlStyle.modalcontent}>
               Popup Delete , Are you sure want to delete id :{" "}
               {selectedOneRowForDelete[uniqueId]}
               <button onClick={() => onDeleteConfirm(selectedOneRowForDelete)}>
@@ -213,6 +227,7 @@ const Editable = ({
               <button onClick={() => onDeleteCancel(selectedOneRowForDelete)}>
                 Cancel
               </button>
+            </div>
             </div>
           )}
         </>
@@ -280,19 +295,31 @@ const Editable = ({
             })}
         </table>
 
-        <button onClick={() => changePage(true)}>Next</button>
-        <span>PageNo:- {pageNo}</span>
-        <button onClick={() => changePage(false)}>Prev</button>
-
-        <select
-          name="recordsPerPage"
-          onChange={(e) => recordSelectionPerPageChange(e.target.value)}
-          value={recordsPerPage}
-        >
-          {recordsPerPageOption.map((item) => (
-            <option value={item}>{item}</option>
-          ))}
-        </select>
+        <div className={EditabrlStyle.TablePagination}>
+          <button
+            className={EditabrlStyle.PreNext_btn}
+            onClick={() => changePage(false)}
+          >
+            &lt;
+          </button>
+          <span className={EditabrlStyle.PageNo}>{pageNo}</span>
+          <button
+            className={EditabrlStyle.PreNext_btn}
+            onClick={() => changePage(true)}
+          >
+            &#62;
+          </button>
+          <select
+            name="recordsPerPage"
+            className={EditabrlStyle.PageOption}
+            onChange={(e) => recordSelectionPerPageChange(e.target.value)}
+            value={recordsPerPage}
+          >
+            {recordsPerPageOption.map((item) => (
+              <option value={item}>{item}</option>
+            ))}
+          </select>
+        </div>
       </div>
     </div>
   );

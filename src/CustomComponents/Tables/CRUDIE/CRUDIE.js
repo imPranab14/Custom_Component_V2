@@ -4,6 +4,8 @@ import { read, utils, writeFile } from 'xlsx';
 
 import { getInputBoxFromType } from "../../../services/editTable";
 
+import CrudieStyle from "../CRUDIE/Crudie.module.scss";
+
 const CRUDIE = ({
     data,
     columns,
@@ -352,9 +354,10 @@ const CRUDIE = ({
         }
     }
 
-    return <div>
+    return <div className={CrudieStyle.MainBody}>
+        <div className={CrudieStyle.frame}>
         <>
-            <button onClick={createNewRecord}>Create New</button>
+            <button  onClick={createNewRecord}>Create New</button>
             <button onClick={deleteAllSelected}>Delete</button>
         </>
 
@@ -417,14 +420,14 @@ const CRUDIE = ({
             )}
         </>
 
-        {tableHeader && <h2 className="tableHeader">{tableHeader}</h2>}
+        {tableHeader && <h2 className={CrudieStyle.MainHeader}>{tableHeader}</h2>}
         <table>
 
             <tr>
-                <th>Select</th>
+                <th className={CrudieStyle.TableHeaderText}>Select</th>
                 {columns.map((col, index) => (
-                    <th>
-                        {col.sortable ? <button onClick={() => sortColumn(col.column, (sortedColumn === col.column && sortedAsc === 1) ? false : true)}>
+                    <th >
+                        {col.sortable ? <button className={CrudieStyle.TableHeaderText} onClick={() => sortColumn(col.column, (sortedColumn === col.column && sortedAsc === 1) ? false : true)}>
                             {col.column}{" "}
                             {
                                 col.column === sortedColumn && <span>
@@ -439,12 +442,12 @@ const CRUDIE = ({
                         }
                     </th>
                 ))}
-                <th>Edit</th>
-                <th>Delete</th>
+                <th className={CrudieStyle.TableHeaderText}>Edit</th>
+                <th className={CrudieStyle.TableHeaderText}>Delete</th>
 
             </tr>
 
-            <tr>
+            <tr className={CrudieStyle.test}>
                 <th></th>
                 {columns &&
                     valuesToBeFiltered &&
@@ -486,19 +489,32 @@ const CRUDIE = ({
                 })}
         </table>
 
-        <button onClick={() => changePage(true)}>Next</button>
-        <span>PageNo:- {pageNo}</span>
-        <button onClick={() => changePage(false)}>Prev</button>
-
-        <select
+        <div className={CrudieStyle.TablePagination}>
+          <button
+            className={CrudieStyle.PreNext_btn}
+            onClick={() => changePage(false)}
+          >
+            &lt;
+          </button>
+          <span className={CrudieStyle.PageNo}>{pageNo}</span>
+          <button
+            className={CrudieStyle.PreNext_btn}
+            onClick={() => changePage(true)}
+          >
+            &#62;
+          </button>
+          <select
             name="recordsPerPage"
+            className={CrudieStyle.PageOption}
             onChange={(e) => recordSelectionPerPageChange(e.target.value)}
             value={recordsPerPage}
-        >
+          >
             {recordsPerPageOption.map((item) => (
-                <option value={item}>{item}</option>
+              <option value={item}>{item}</option>
             ))}
-        </select>
+          </select>
+        </div>
+    </div>
     </div>
         ;
 }
