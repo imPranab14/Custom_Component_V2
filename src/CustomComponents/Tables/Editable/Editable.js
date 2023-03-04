@@ -191,7 +191,7 @@ const Editable = ({
             <div  className={EditabrlStyle.modal}  >
              <div className={EditabrlStyle.modalcontent}>
              <h3 className={EditabrlStyle.PopupHeader}>Popup Form</h3>
-              <div className={EditabrlStyle.test}>
+              <div className={EditabrlStyle.Tdata}>
               {columns.map((col, index) =>
                 getInputBoxFromType(
                   col,

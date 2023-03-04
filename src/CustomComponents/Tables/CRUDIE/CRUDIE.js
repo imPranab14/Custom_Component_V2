@@ -5,6 +5,8 @@ import { read, utils, writeFile } from 'xlsx';
 import { getInputBoxFromType } from "../../../services/editTable";
 
 import CrudieStyle from "../CRUDIE/Crudie.module.scss";
+import { FaEdit } from "react-icons/fa";
+import { FaPrescriptionBottleAlt } from "react-icons/fa";
 
 const CRUDIE = ({
     data,
@@ -385,8 +387,10 @@ const CRUDIE = ({
 
         <>
             {selectedOneRowForEdit && (
-                <div>
-                    Popup Form
+                <div className={CrudieStyle.modal} >
+                     <div className={CrudieStyle.modalcontent}>
+                    <h3 className={CrudieStyle.PopupHeader}>Popup Form</h3>
+                    <div className={CrudieStyle.Tdata}>
                     {columns.map((col, index) =>
                         getInputBoxFromType(
                             col,
@@ -395,6 +399,8 @@ const CRUDIE = ({
                             index
                         )
                     )}
+                    </div>
+                    <div className={CrudieStyle.PopupFooter}>
                     {createNewRecordFormOpen ? (
                         <button onClick={() => onAddNewRecord()}>Create New</button>
                     ) : (
@@ -402,12 +408,15 @@ const CRUDIE = ({
                     )}
                     <button onClick={() => onUpdateCancel()}>Cancel</button>
                 </div>
+                </div>
+                </div>
             )}
         </>
 
         <>
             {selectedOneRowForDelete && (
-                <div>
+                <div  className={CrudieStyle.modal}> 
+                <div className={CrudieStyle.modalcontent}>
                     Popup Delete , Are you sure want to delete id :{" "}
                     {selectedOneRowForDelete[uniqueId]}
                     <button onClick={() => onDeleteConfirm(selectedOneRowForDelete)}>
@@ -416,6 +425,7 @@ const CRUDIE = ({
                     <button onClick={() => onDeleteCancel(selectedOneRowForDelete)}>
                         Cancel
                     </button>
+                </div>
                 </div>
             )}
         </>
@@ -447,15 +457,16 @@ const CRUDIE = ({
 
             </tr>
 
-            <tr className={CrudieStyle.test}>
-                <th></th>
+            <tr className={CrudieStyle.teste}>
+                <th>?</th>
                 {columns &&
                     valuesToBeFiltered &&
                     columns.map((col, index) => (
 
-                        <th>
+                        <th className={CrudieStyle.FilterSection}>
                             {col.filterable ? (
                                 <input
+                                    className={CrudieStyle.FilterInput}
                                     placeholder={col.column}
                                     value={valuesToBeFiltered[col.column]}
                                     name={col.column}
@@ -466,23 +477,25 @@ const CRUDIE = ({
                             )}
                         </th>
                     ))}
+                    <th></th>
+                    <th></th>
             </tr>
 
             {datainPage &&
                 datainPage.map((row) => {
                     let tempUniqueId = row[uniqueId]
                     return (
-                        <tr>
+                        <tr >
                             <td><input type="checkbox" id={"checkBox_" + row[uniqueId]} name="selectCheckBox" checked={multiSelectForDeleteList[tempUniqueId] ? true : false} onChange={(e) => onMulitSelectChange(e, row)} /></td>
                             {columns.map((col) => (
                                 <td>{row[col.column]}</td>
                             ))}
                             <td>
-                                <button onClick={() => editRow(row)}>Edit</button>
+                                <button  className={CrudieStyle.Editbtn} onClick={() => editRow(row)}><FaEdit /></button>
                             </td>
 
                             <td>
-                                <button onClick={() => deleteRow(row)}>Delete</button>
+                                <button   className={CrudieStyle.delbtn} onClick={() => deleteRow(row)}> <FaPrescriptionBottleAlt /></button>
                             </td>
                         </tr>
                     );

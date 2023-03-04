@@ -52,7 +52,7 @@ function App() {
   };
   return (
     <div>
-      {/* <div>
+      <div>
         {dummyData && columns && (
           <Sortable
             data={dummyData}
@@ -62,7 +62,7 @@ function App() {
             defaultRecordPerPage={5}
           />
         )}
-      </div> */}
+      </div>
 
       <div>
         {dummyData && columns && (
@@ -77,7 +77,7 @@ function App() {
         )}
       </div>
 
-      {/* <div>
+      <div>
         {dummyData && columns && (
           <Editable
             data={dummyData}
@@ -89,7 +89,7 @@ function App() {
             uniqueId="id"
           />
         )}
-      </div> */}
+      </div>
 
       <div>
         {dummyData && columns && (
