@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ExpandedTaleStyle from "../ExpanedTable/ExpadedTale.module.scss"
 
 const Expanded = ({ data,
     columns,
@@ -116,11 +117,28 @@ const Expanded = ({ data,
     }
 
 
-    return <div> {tableHeader && <h2 className="tableHeader">{tableHeader}</h2>}
+    return <div className={ExpandedTaleStyle.MainBody}> 
+    <div className={ExpandedTaleStyle.frame}>
+    {tableHeader && <h2 className={ExpandedTaleStyle.MainHeader}>{tableHeader}</h2>}
         <table>
             <tr>
-                {columns.map((col, index) => (
+            <th className={ExpandedTaleStyle.TableHeaderText}>Expand</th>
+                {columns && valuesToBeFiltered && columns.map((col, index) => (
                     <th>
+                        {col.filterable ?
+                            <input placeholder={col.column} value={valuesToBeFiltered[col.column]}
+                                name={col.column}
+                                onChange={(e) => changeFilterableInputs(e)}
+                            />
+                            : <input disabled />
+
+
+                        }
+                    </th>
+                ))}
+
+                {columns.map((col, index) => (
+                    <th  className={ExpandedTaleStyle.TableHeaderText}>
                         {/* {col.sortable ? <button onClick={() => sortColumn(col.column, (sortedColumn === col.column && sortedAsc === 1) ? false : true)}>
               {col.column}{" "}
               {
@@ -140,20 +158,8 @@ const Expanded = ({ data,
             </tr>
 
             <tr>
-                <th>Expand</th>
-                {columns && valuesToBeFiltered && columns.map((col, index) => (
-                    <th>
-                        {col.filterable ?
-                            <input placeholder={col.column} value={valuesToBeFiltered[col.column]}
-                                name={col.column}
-                                onChange={(e) => changeFilterableInputs(e)}
-                            />
-                            : <input disabled />
-
-
-                        }
-                    </th>
-                ))}
+                
+             
             </tr>
 
             {datainPage &&
@@ -184,19 +190,33 @@ const Expanded = ({ data,
                         </tr>
                     );
                 })}
-        </table>  <button onClick={() => changePage(true)}>Next</button>
-        <span>PageNo:- {pageNo}</span>
-        <button onClick={() => changePage(false)}>Prev</button>
-
-        <select
+        </table>  
+        <div className={ExpandedTaleStyle.TablePagination}>
+          <button
+            className={ExpandedTaleStyle.PreNext_btn}
+            onClick={() => changePage(false)}
+          >
+            &lt;
+          </button>
+          <span className={ExpandedTaleStyle.PageNo}>{pageNo}</span>
+          <button
+            className={ExpandedTaleStyle.PreNext_btn}
+            onClick={() => changePage(true)}
+          >
+            &#62;
+          </button>
+          <select
             name="recordsPerPage"
+            className={ExpandedTaleStyle.PageOption}
             onChange={(e) => recordSelectionPerPageChange(e.target.value)}
             value={recordsPerPage}
-        >
+          >
             {recordsPerPageOption.map((item) => (
-                <option value={item}>{item}</option>
+              <option value={item}>{item}</option>
             ))}
-        </select>
+          </select>
+    </div>
+    </div>
     </div>
 }
 

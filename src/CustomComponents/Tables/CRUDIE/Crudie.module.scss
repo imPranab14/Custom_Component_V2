@@ -170,3 +170,184 @@ button {
   display: grid;
   padding: 0.5rem 2rem 1rem 1rem;
 }
+
+
+//Top Toolbat
+.Toolbar{
+  //background-color: red;
+  display: flex;
+  justify-content: space-between;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 1.05rem;
+  border-radius: 6px;
+ // gap: 0.5rem;
+}
+.ToolbarLeft{
+  //background-color: blue;
+  display: flex;
+  align-content: center;
+}
+.FaPlus{
+  font-size: 10px;
+}
+.CreateNew{
+  appearance: none;
+  backface-visibility: hidden;
+  background-color: #27ae60;
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1.5;
+  outline: none;
+  overflow: hidden;
+  padding: 8px 14px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+  margin-right: 0.5rem;
+}
+
+.CreateNew:hover {
+  background-color: #1e8449;
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: .35s;
+}
+
+.CreateNew:active {
+  transform: translateY(2px);
+  transition-duration: .35s;
+}
+
+.CreateNew:hover {
+  box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
+}
+
+/* Delete Btn */
+.Delete{
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.Delete:hover,
+.Delete:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.Delete:active {
+  opacity: .5;
+}
+
+
+
+
+
+
+
+.ToolbarRight{
+ // background-color: #888;
+  display: flex;
+}
+.Upload{
+  //background-color: black;
+  display: grid;
+}
+.InputSectionHide{
+ display: none;
+}
+.Export{
+  display: grid;
+  //background-color: red;
+}
+
+/*  ImportExcelBtn CSS */
+// .ImportExcelBtn {
+//   align-items: center;
+//   background-color: #FFE7E7;
+//   background-position: 0 0;
+//   border: 1px solid #FEE0E0;
+//   border-radius: 11px;
+//   box-sizing: border-box;
+//   color: #D33A2C;
+//   cursor: pointer;
+//   display: flex;
+//   font-size: 1rem;
+//   font-weight: 700;
+//   line-height: 33.4929px;
+//   list-style: outside url(https://www.smashingmagazine.com/images/bullet.svg) none;
+//   padding: 2px 12px;
+//   text-align: left;
+//   text-decoration: none;
+//   text-shadow: none;
+//   text-underline-offset: 1px;
+//   transition: border .2s ease-in-out,box-shadow .2s ease-in-out;
+//   user-select: none;
+//   -webkit-user-select: none;
+//   touch-action: manipulation;
+//   white-space: nowrap;
+//   word-break: break-word;
+// }
+
+// .ImportExcelBtn:active,
+// .ImportExcelBtn:hover,
+// .ImportExcelBtn:focus {
+//   outline: 0;
+// }
+
+
+// .ImportExcelBtn:active {
+//   background-color: #D33A2C;
+//   box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
+//   color: #FFFFFF;
+// }
+
+// .ImportExcelBtn:hover {
+//   background-color: #FFE3E3;
+//   border-color: #FAA4A4;
+// }
+
+// .ImportExcelBtn:active:hover,
+// .ImportExcelBtn:focus:hover,
+// .ImportExcelBtn:focus {
+//   background-color: #D33A2C;
+//   box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
+//   color: #FFFFFF;
+// }
