@@ -71,7 +71,7 @@ function App() {
   }
   return (
     <div>
-      {/* <div>
+       {/* <div>
         {dummyData && columns && (
           <Sortable
             data={dummyData}
@@ -81,9 +81,9 @@ function App() {
             defaultRecordPerPage={5}
           />
         )}
-      </div> */}
+      </div> 
 
-      {/* <div>
+       <div>
         {dummyData && columns && (
           <Filterable
             data={dummyData}
@@ -94,9 +94,9 @@ function App() {
             defaultRecordPerPage={5}
           />
         )}
-      </div> */}
+      </div>  */}
 
-      {/* <div>
+       {/* <div>
         {dummyData && columns && (
           <Editable
             data={dummyData}
@@ -108,9 +108,9 @@ function App() {
             uniqueId="id"
           />
         )}
-      </div> */}
+      </div>  */}
 
-      {/* <div>
+       <div>
         {dummyData && columns && (
           <CRUDIE
             data={data}
@@ -126,7 +126,7 @@ function App() {
         )}
       </div>
 
-      <div>
+       {/* <div>
         {dummyData && columns && (
           <Expandable
             data={data}
@@ -141,8 +141,8 @@ function App() {
             innerTableColumns={["current_address", "permanent_address"]}
           />
         )}
-      </div> */}
-        <Forms />
+      </div>   */}
+        {/* <Forms />
 
 <Sliders />
 
@@ -150,7 +150,7 @@ function App() {
 
 <Popover />
 
-<Cards />
+<Cards /> */}
     </div>
   );
 }

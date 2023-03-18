@@ -1,0 +1,73 @@
+.MainBody {
+  margin: 2%;
+}
+
+.frame {
+  overflow-y: auto;
+  padding: 1.3%;
+  background-color: white;
+  border-radius: 1.2rem;
+}
+
+.MainHeader {
+  margin-top: 0.5rem;
+  margin-bottom: 1.3rem;
+  font-size: 1.1rem;
+}
+
+.TablePagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.9rem;
+}
+
+.PreNext_btn {
+  background-color: none;
+  font-size: 1rem;
+  color: #495057;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  padding-top: 0.18rem;
+}
+
+.PageNo {
+  font-size: 0.9rem;
+  padding: 0.3rem 0.7rem 0.3rem 0.7rem;
+  border: 1px solid rgba(0, 0, 0, 0.0470588235);
+  border-radius: 50%;
+  background-color: rgba(227, 233, 236, 0.7333333333);
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+  font-weight: 400;
+}
+
+.TableHeaderFont {
+  color: #495057;
+  font-size: 0.8rem;
+}
+
+.PageOption {
+  margin-left: 2.5rem;
+  border-radius: 7px;
+  border-color: #bebebe;
+}
+
+.FilterSection {
+  margin: 0;
+  padding: 9px 10px;
+}
+
+.FilterInput {
+  color: #495057;
+  background: #fff;
+  padding: 0.35rem 0.35rem;
+  border: 1px solid #ced4da;
+  outline: 0 none;
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+
+.FilterInput:hover {
+  border: 1px solid #3272b3;
+}/*# sourceMappingURL=FilterTable.module.css.map */

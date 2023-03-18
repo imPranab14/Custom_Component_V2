@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { read, utils, writeFile } from "xlsx";
 import { getInputBoxFromType } from "../../../services/editTable";
-import CrudieStyle from "../CRUDIE/Crudie.module.scss";
+//import CrudieStyle from "../CRUDIE/Crudie.module.scss";
+import CrudieStyle from "../CRUDIE/Crudie.module.css";
 import { FaEdit } from "react-icons/fa";
 import { FaPrescriptionBottleAlt } from "react-icons/fa";
 

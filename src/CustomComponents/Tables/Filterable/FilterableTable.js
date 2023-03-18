@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import FilterTableStyle from "../Filterable/FilterTable.module.scss";
+//import FilterTableStyle from "../Filterable/FilterTable.module.scss";
+import FilterTableStyle from "../Filterable/FilterTable.module.css";
 
 const FilterableTable = ({
   data,

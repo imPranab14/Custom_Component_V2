@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eff3f8;
+}
+
+.frame {
+  overflow-y: auto;
+  padding: 1.3%;
+  background-color: white;
+  border-radius: 1.2rem;
+}
+
+.MainBody {
+  margin: 2%;
+}
+
+.TablePagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.9rem;
+}
+
+.PageOption {
+  margin-left: 2.5rem;
+  border-radius: 7px;
+  border-color: #bebebe;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+.PAgebtn {
+  background-color: none;
+  font-size: 1rem;
+  color: #495057;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  padding-top: 0.18rem;
+}
+
+.PAgebtn :active {
+  color: red;
+}
+
+.TableHeaderText {
+  font-weight: 700;
+  color: #495057;
+  padding-left: 0;
+  font-size: 0.82rem;
+}
+
+.MainHeader {
+  margin-top: 0.5rem;
+  margin-bottom: 1.3rem;
+  font-size: 1.1rem;
+}
+
+tr:hover td {
+  background-color: rgba(227, 233, 236, 0.7333333333);
+}
+
+.PageNo {
+  font-size: 0.9rem;
+  padding: 0.3rem 0.7rem 0.3rem 0.7rem;
+  border: 1px solid rgba(0, 0, 0, 0.0470588235);
+  border-radius: 50%;
+  background-color: rgba(227, 233, 236, 0.7333333333);
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+  font-weight: 400;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  height: 200px;
+  overflow-y: scroll;
+}
+
+th {
+  text-align: left;
+  padding: 1rem 1rem;
+  border: 1px solid #dee2e6;
+  border-width: 0 0 1px 0;
+  font-weight: 700;
+  color: #005ab4;
+  background: #f8f9fa;
+}
+
+td {
+  text-align: left;
+  border: 1px solid #dee2e6;
+  border-width: 0 0 1px 0;
+  padding: 1rem 1rem;
+  color: #495057;
+  font-size: 0.9rem;
+}/*# sourceMappingURL=SortTable.module.css.map */

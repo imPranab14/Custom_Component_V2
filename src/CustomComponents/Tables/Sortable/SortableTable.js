@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import ShortTableStyle from "../Sortable/SortTable.module.scss";
+//import ShortTableStyle from "../Sortable/SortTable.module.scss";
+import ShortTableStyle from "../Sortable/SortTable.module.css";
 
 const Sortable = ({
   data,

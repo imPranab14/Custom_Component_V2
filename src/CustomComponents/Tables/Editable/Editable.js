@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getInputBoxFromType } from "../../../services/editTable";
-import EditabrlStyle from "../Editable/Editable.module.scss";
+//import EditabrlStyle from "../Editable/Editable.module.scss";
+import EditabrlStyle from "../Editable/Editable.module.css";
 import { FaEdit } from "react-icons/fa";
 import { FaPrescriptionBottleAlt } from "react-icons/fa";
 
