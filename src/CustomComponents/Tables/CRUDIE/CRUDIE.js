@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { read, utils, writeFile } from "xlsx";
 import { getInputBoxFromType } from "../../../services/editTable";
-//import CrudieStyle from "../CRUDIE/Crudie.module.scss";
-import CrudieStyle from "../CRUDIE/Crudie.module.css";
+import CrudieStyle from "../CRUDIE/Crudie.module.scss";
+//import CrudieStyle from "../CRUDIE/Crudie.module.css";
 import { FaEdit } from "react-icons/fa";
 import { FaPrescriptionBottleAlt } from "react-icons/fa";
 
@@ -429,11 +429,11 @@ const CRUDIE = ({
                 </div>
               </div>
               <div className={CrudieStyle.Export}>
-                <button onClick={onExcelExport} className="btn">
+                <button onClick={onExcelExport} className={CrudieStyle.ExpotJsonbtn}>
                   <FaDownload />
                   Export Excel<i className="fa fa-download"></i>
                 </button>
-                <button onClick={onJsonExport} className="btn">
+                <button onClick={onJsonExport} className={CrudieStyle.ExpotJsonbtn}>
                   <FaDownload />
                   Export JSON
                 </button>

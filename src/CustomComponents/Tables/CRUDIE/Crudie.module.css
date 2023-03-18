@@ -260,12 +260,33 @@ button {
   opacity: 0.5;
 }
 
+.ImportExcelBtn {
+  padding: 3px 14px;
+  /* border: 1px solid black; */
+  background: green;
+  color: white;
+  border-radius: 6px;
+  font-size: 0.82rem;
+}
+
+.ExpotJsonbtn {
+  padding: 3px 14px;
+  /* border: 1px solid black; */
+  background: blue;
+  color: white;
+  border-radius: 6px;
+  font-size: 0.82rem;
+}
+
 .ToolbarRight {
   display: flex;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
 }
 
 .Upload {
   display: grid;
+  row-gap: 6px;
 }
 
 .InputSectionHide {
@@ -274,6 +295,7 @@ button {
 
 .Export {
   display: grid;
+  row-gap: 6px;
 }
 
 /*  ImportExcelBtn CSS *//*# sourceMappingURL=Crudie.module.css.map */

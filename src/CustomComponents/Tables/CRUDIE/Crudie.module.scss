@@ -275,26 +275,38 @@ button {
 .Delete:active {
   opacity: .5;
 }
-
-
-
-
-
-
-
+.ImportExcelBtn{
+  padding: 3px 14px;
+    /* border: 1px solid black; */
+    background: green;
+    color: white;
+    border-radius: 6px;
+    font-size: 0.82rem;
+}
+.ExpotJsonbtn{
+  padding: 3px 14px;
+    /* border: 1px solid black; */
+    background: blue;
+    color: white;
+    border-radius: 6px;
+    font-size: 0.82rem;
+}
 .ToolbarRight{
  // background-color: #888;
   display: flex;
+  column-gap: 8px;
 }
 .Upload{
   //background-color: black;
   display: grid;
+  row-gap: 6px;
 }
 .InputSectionHide{
  display: none;
 }
 .Export{
   display: grid;
+  row-gap: 6px;
   //background-color: red;
 }
 

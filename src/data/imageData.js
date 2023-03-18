@@ -1,13 +1,17 @@
 const imagesList = [
     {
-        image: "imageA.jpg",
-    }, {
-        image: "imageB.jpg",
-    }, {
+        image: "ImagesSlider1.jpg",
+    }, 
+    {
+        image: "ImagesSlider2.jpg",
+    }, 
+    {
         image: "imageC.jpg",
-    }, {
+    }, 
+    {
         image: "imageD.jpg",
-    }, {
+    }, 
+    {
         image: "imageE.jpg",
     }]
 
