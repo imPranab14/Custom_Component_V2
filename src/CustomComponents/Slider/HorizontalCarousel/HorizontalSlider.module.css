@@ -20,9 +20,9 @@
 } 
 .container{
   background-color: red;
-  margin: 1% 4%;
+  margin: 1% 2%;
   border-radius: 1.2rem;
-  width: 92%;
+  width: 96%;
   height: 330px;
 }
 .ImageData{
@@ -38,7 +38,7 @@
   /* background-color: rgb(119, 0, 255); */
   display: flex;
   justify-content: space-between;
-  margin-top: -205px;
+  margin-top: -207px;
 
 }
 .Prebtn{
@@ -50,8 +50,11 @@
     height: 90px;
     background-color: white;
     box-shadow: 0 1px 5px 0 rgba(0,0,0,.11);
-    transition: opacity .1s ease-in;
+    transition: opacity .5s ease-in;
     border-radius: 0px 14px 14px 0px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    cursor: pointer;
 
 }
  .Nextbtn{
@@ -63,8 +66,13 @@
     height: 90px;
     background-color: white;
     box-shadow: 0 1px 5px 0 rgba(0,0,0,.11);
-    transition: opacity .1s ease-in;
+    transition: opacity .5s ease-in;
     border-radius: 14px 0px 0px 14px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1, 1);
 
 
 } 

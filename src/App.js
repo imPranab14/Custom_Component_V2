@@ -87,7 +87,7 @@ function App() {
   };
   return (
     <div>
-     <div>
+     {/* <div>
         {dummyData && columns && (
           <Sortable
             data={dummyData}
@@ -97,7 +97,7 @@ function App() {
             defaultRecordPerPage={5}
           />
         )}
-      </div> 
+      </div>  */}
 
         {/* <div>
         {dummyData && columns && (
@@ -162,11 +162,11 @@ function App() {
 
      <Sliders />
 
-        {/*<PopupPage />
+      <PopupPage />
 
-      <Popover />
+       <Popover />
 
-      <Cards />   */}
+      {/* <Cards />    */}
     </div>
   );
 }

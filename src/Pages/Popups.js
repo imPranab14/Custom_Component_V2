@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Popup from "../CustomComponents/PopUps/Popup";
-
+import PopupStyle from "../CustomComponents/PopUps/PopupStyle.module.css";
 
 const PopupPage = () => {
 
@@ -8,11 +8,11 @@ const PopupPage = () => {
     const [visible, setVisible] = useState(false);
 
 
-    return (<div>
+    return (<div className={PopupStyle.Popupbody}>
 
-        <button onClick={() => setVisible(true)}>Open Popup</button>
+        <button className={PopupStyle.PopupBtn} onClick={() => setVisible(true)}>Open Popup</button>
 
-        <Popup visible={visible} onClose={() => setVisible(false)} ><div>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        <Popup  visible={visible} onClose={() => setVisible(false)} ><div>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
             an unknown printer took a galley of type and scrambled it to make a type specimen
             book. It has survived not only five centuries, but also the leap into electronic

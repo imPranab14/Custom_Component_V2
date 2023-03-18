@@ -35,19 +35,21 @@ const Horizontal = () => {
             className={sliderStyles.Prebtn}
             onClick={() => changePage(-1)}
           >
-            &#x2190;
+           &#10094;
           </button>
 
-          {/* {imagesDataSet && imagesDataSet.length &&
-            imagesDataSet.map((img, index) =>
-                <span className={`${sliderStyles.dot} ${page === index ? sliderStyles.active : ""}`}></span>)
-        } */}
           <button
             className={sliderStyles.Nextbtn}
             onClick={() => changePage(1)}
           >
-            &#x2192;
+            &#10095;
           </button>
+        </div>
+        <div className="slider">
+        {/* {imagesDataSet && imagesDataSet.length &&
+            imagesDataSet.map((img, index) =>
+                <span className={`${sliderStyles.dot} ${page === index ? sliderStyles.active : ""}`}></span>)
+            }  */}
         </div>
       </div>
     </div>

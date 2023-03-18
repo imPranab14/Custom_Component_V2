@@ -1,0 +1,67 @@
+.Popupbody{
+    /* background-color: red; */
+    margin: 2%;
+}
+.PopupBtn{
+  background-color: #fff;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #0f1111;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Amazon Ember",sans-serif;
+  font-size: 13px;
+  line-height: 29px;
+  padding: 0 10px 0 11px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 120px;
+  font-weight: 700;
+}
+.PopupBtn:hover {
+  background-color: #f7fafa;
+}
+.PopupBtn:focus {
+  border-color: #008296;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  outline: 0;
+}
+.modal {
+  
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.PopupContent{
+  background-color: white;
+  padding: 1rem;
+  border: 1px solid #888;
+  width: 60%; /* Could be more or less, depending on screen size */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 8px;
+}
+.CloseBtn{
+  float: right;
+  margin-top: -5px;
+  border: 1px solid #0000003d;
+  border-radius: 70%;
+  font-weight: 600;
+  cursor: pointer;
+
+}
