@@ -16,40 +16,59 @@ import expandableTableData from "./data/expandableData";
 import { useEffect, useState } from "react";
 import CRUDIE from "./CustomComponents/Tables/CRUDIE/CRUDIE";
 
+import HorizontalSLider from "./CustomComponents/Slider/HorizontalCarousel/HorizontalSlider"
+
+import Sliders from "./Pages/Sliders";
+import PopupPage from "./Pages/Popups";
+import Popover from "./Pages/Popover";
+import Forms from "./Pages/Form";
+
+import Cards from "./Pages/Cards";
+
 function App() {
   const [columns, setColumns] = useState();
-  const [data, setData] = useState(dummyData);
+  const [data, setData] = useState(dummyData)
   useEffect(() => {
-    let tempCols = Object.keys(dummyData[0]).map((colName) => ({
-      column: colName,
-      sortable: true,
-      editable: true,
-      filterable: true,
-      formInputDetails: {
-        defaultVal: "abcd",
-        inputType: "text",
-        radioLabel: "Please select your favorite Web language:",
-        data: [
-          { label: "xyz", value: "abc" },
-          { label: "uvw", value: "def" },
-        ],
-        min: 0,
-        max: 5,
-      },
-      // if inut type is dropdown then [{ label: "xyz", value: "abc" }]
+    let tempCols = Object.keys(dummyData[0]).map((colName) =>
+    ({
+      column: colName, sortable: true, editable: true, filterable: true,
+      formInputDetails: { defaultVal: "abcd", inputType: "text", radioLabel: "Please select your favorite Web language:", data: [{ label: "xyz", value: "abc" }, { label: "uvw", value: "def" }], min: 0, max: 5 }
+      // if inut type is dropdown then [{ label: "xyz", value: "abc" }] 
       // if it it text then {placeholder: "xyz" , name: "name"}
       // if checkbox {label: "label" }
       // if date {min: "" , max: "" }
       // if int {min: "" , max: "" }
       // if textarea  {placeholder: "xyz" , name: "name" , lines: 2}
+
+
     }));
+
+    tempCols.innerColumns = [
+      {
+        column: "current_address", sortable: true, filterable: true,
+
+      }, {
+        column: "permanent_address", sortable: true, filterable: true,
+
+      },
+
+    ]
+
+    tempCols.innerColumns.innerColumns = [{
+      column: "current_address", sortable: true, filterable: true,
+
+    }, {
+      column: "permanent_address", sortable: true, filterable: true,
+
+    },]
     setColumns(tempCols);
-    console.log(tempCols);
+    console.log(tempCols)
   }, []);
+
 
   const upDateData = (newaData) => {
     setData(newaData);
-  };
+  }
   return (
     <div>
       {/* <div>
@@ -91,7 +110,7 @@ function App() {
         )}
       </div> */}
 
-      <div>
+      {/* <div>
         {dummyData && columns && (
           <CRUDIE
             data={data}
@@ -122,7 +141,16 @@ function App() {
             innerTableColumns={["current_address", "permanent_address"]}
           />
         )}
-      </div>
+      </div> */}
+        <Forms />
+
+<Sliders />
+
+<PopupPage />
+
+<Popover />
+
+<Cards />
     </div>
   );
 }
