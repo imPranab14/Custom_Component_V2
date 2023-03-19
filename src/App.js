@@ -97,7 +97,7 @@ function App() {
             defaultRecordPerPage={5}
           />
         )}
-      </div>  */}
+      </div>  
 
         {/* <div>
         {dummyData && columns && (

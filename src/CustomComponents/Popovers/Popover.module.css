@@ -7,13 +7,36 @@
 }
 
 .alert-danger {
-  background-color: red;
-  color: white;
+    background-color:rgb(251 225 225);
+    padding: 1rem;
+    /* border: 1px solid #888; */
+    width: 10%;
+    top: 10%;
+    left: 92%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 6px;
+    margin: 0;
+    font-weight: 600;
+    color: red;
+    border-left: 0.35rem solid red;
+
 }
 
 .alert-success {
-  background-color: green;
-  color: white;
+  background-color:rgb(231, 251, 225);
+    padding: 1rem;
+    /* border: 1px solid #888; */
+    width: 10%;
+    top: 10%;
+    left: 92%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 6px;
+    margin: 0;
+    font-weight: 600;
+    color: #408505;
+    border-left: 0.35rem solid #408505;
 }
 
 .alert-info {
@@ -27,11 +50,56 @@
 }
 
 .alert-warning {
-  background-color: yellow;
-  color: white;
+  background-color:rgb(248, 251, 225);
+    padding: 1rem;
+    /* border: 1px solid #888; */
+    width: 10%;
+    top: 10%;
+    left: 92%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 6px;
+    margin: 0;
+    font-weight: 600;
+    color: #e7a600;
+    border-left: 0.35rem solid #e7a600;
 }
 
 .alert-secondary {
   background-color: gray;
   color: white;
+}
+.Mainbody{
+  /* background-color: rgb(255, 255, 255); */
+  margin: 2%;
+}
+.DengerBtnStyle {
+    background: #f32525;
+    padding: 0.5rem 1rem;
+    border-radius: 14px;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin: 0rem 0.5rem;
+}
+.SuccessBtnStyle{
+   background: #408505;
+    padding: 0.5rem 1rem;
+    border-radius: 14px;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin: 0rem 0.5rem;
+}
+.WarningBtnStyle{
+  background: #fbc02d;
+  padding: 0.5rem 1rem;
+  border-radius: 14px;
+  color: black;
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin: 0rem 0.5rem;
+}
+.redhjhh{
+  background-color: aqua;
 }

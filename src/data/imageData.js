@@ -1,9 +1,9 @@
 const imagesList = [
     {
-        image: "ImagesSlider1.jpg",
+        image: "imageA.jpg",
     }, 
     {
-        image: "ImagesSlider2.jpg",
+        image: "imageB.jpg",
     }, 
     {
         image: "imageC.jpg",

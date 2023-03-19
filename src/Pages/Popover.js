@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import Alerts from "../CustomComponents/Popovers/Popover"
+import PopoverStyle from "../CustomComponents/Popovers/Popover.module.css"
 
 const Popover = () => {
 
@@ -12,16 +13,16 @@ const Popover = () => {
     const [info, setInfo] = useState(false);
 
 
-    return (<div>
-        <button onClick={() => setRed(true)}>red</button>
-        <button onClick={() => setYellow(true)}>yellow</button>
-        <button onClick={() => setGreen(true)}>green</button>
+    return (<div className={PopoverStyle.Mainbody}>
+        <button className={PopoverStyle.DengerBtnStyle} onClick={() => setRed(true)}>Denger</button>
+        <button className={PopoverStyle.WarningBtnStyle} onClick={() => setYellow(true)}>Warning</button>
+        <button className={PopoverStyle.SuccessBtnStyle} onClick={() => setGreen(true)}>Success</button>
         <button onClick={() => setBlue(true)}>blue</button>
         <button onClick={() => setGray(true)}>gray</button>
         <button onClick={() => setInfo(true)}>info</button>
 
         {red && (
-            <Alerts
+            <Alerts 
                 variant="danger"
                 time={4}
                 children="red has been updated"
